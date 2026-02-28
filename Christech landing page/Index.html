@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="test.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img id="logo" src="Images/christech-logo2.jpg" alt="Christech logo">
+    </header>
+
+    
+    <section id="container">
+        <div id="column">
+        <h1 id="heading">
+            
+            You Could Be Holding This in Your Hand — For Less Than You Think.
+        </h1>
+
+        <p id="para"> 
+            Your Next iPhone 15 Pro Is Just a Click Away – Grab It Fast! <br> For Just <span id="strike">₦1,600,000</span>
+            <span id="clear">₦ 1,100,000</span>
+        </p>
+
+        <a href="http://wa.me/+2348102797105?text=Hello, I would like to order the Iphone 15 pro. [From daniel]"
+        target="_blank"
+        onclick="setTimeout (() => {window.location.href='Continue.html';}, 4500)"
+            id="cta-btn">Get Yours Now</a>
+
+        </div>
+
+        <div id="column">
+        <img src="images/iphone 15 pro.webp"
+        alt="Iphone 15 pro"     
+        loading ="lazy"
+        id="pdct_img">
+        </div>
+    </section>
+    <section id="spec">
+        <!-- <h2>Specs</h2> -->
+    <table>
+        <tr>
+            <th>
+                Brand
+            </th>
+            <th>
+                Model
+            </th>
+            <th>
+                Condition
+            </th>
+            <th>
+                Internal Storage
+            </th>
+            <th>
+                Ram
+            </th>
+        </tr>
+        <tr>
+            <td>
+                Apple
+            </td>
+            <td>
+                iPhone 15 Pro
+            </td>
+            <td>
+                Used
+            </td>
+            <td>
+                256GB
+            </td>
+            <td>
+                8GB
+            </td>
+        </tr>
+    </table>
+    </section>
+    <footer>
+        <a href="https://www.instagram.com/christechonline/" id="cpy">&copy;<span id="year"></span> ChristTech</a>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
