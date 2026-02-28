@@ -25,11 +25,15 @@
 
     <script>
   setTimeout(() => {
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const userAgent = navigator.userAgent;
+    const isAndroid = /Android/i.test(userAgent);
+    const isIphone = /iPhone|iPad|iPod/i.test(userAgent);
     const a = document.createElement('a');
     
-    if (isMobile) {
+    if (isAndroid) {
       a.href = 'intent://send?phone=+2348102797105&text=Hello, I would like to order the Iphone 15 pro. [From daniel]#Intent;scheme=whatsapp;package=com.whatsapp;end';
+    } else if (isIphone) {
+      a.href = 'whatsapp://send?phone=+2348102797105&text=Hello, I would like to order the Iphone 15 pro. [From daniel]';
     } else {
       a.href = 'https://web.whatsapp.com/send?phone=+2348102797105&text=Hello, I would like to order the Iphone 15 pro. [From daniel]';
     }
@@ -44,6 +48,7 @@
 </body>
 
 </html>
+
 
 
 
