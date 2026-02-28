@@ -25,29 +25,14 @@
 
     <script>
   setTimeout(() => {
-    const userAgent = navigator.userAgent;
-    const isAndroid = /Android/i.test(userAgent);
-    const isIphone = /iPhone|iPad|iPod/i.test(userAgent);
-    const a = document.createElement('a');
-    
-    if (isAndroid) {
-      a.href = 'intent://send?phone=+2348102797105&text=Hello, I would like to order the Iphone 15 pro. [From daniel]#Intent;scheme=whatsapp;package=com.whatsapp;end';
-    } else if (isIphone) {
-      a.href = 'whatsapp://send?phone=+2348102797105&text=Hello, I would like to order the Iphone 15 pro. [From daniel]';
-    } else {
-      a.href = 'https://web.whatsapp.com/send?phone=+2348102797105&text=Hello, I would like to order the Iphone 15 pro. [From daniel]';
-    }
-    
-    a.target = '_blank';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    window.location.href = 'https://wa.me/+2348102797105?text=Hello, I would like to order the Iphone 15 pro. [From daniel]';
   }, 2500);
         document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 
 </html>
+
 
 
 
